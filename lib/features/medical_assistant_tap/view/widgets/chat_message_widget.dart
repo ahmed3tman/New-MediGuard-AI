@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../model/medical_assistant_models.dart';
+import 'audio_player_widget.dart';
 
 class ChatMessageWidget extends StatelessWidget {
   final ChatMessage message;
@@ -136,15 +137,23 @@ class ChatMessageWidget extends StatelessWidget {
           ),
           const SizedBox(height: 8),
         ],
-        Text(
-          message.content,
-          style: TextStyle(
-            fontSize: 14,
-            color: message.isUser ? Colors.white : Colors.grey[800],
-            height: 1.4,
+        // Audio player if message has audio
+        if (message.hasAudio && message.audioPath != null)
+          AudioPlayerWidget(
+            audioPath: message.audioPath!,
+            isUser: message.isUser,
           ),
-          textDirection: _getTextDirection(),
-        ),
+        // Text content
+        if (message.content.isNotEmpty)
+          Text(
+            message.content,
+            style: TextStyle(
+              fontSize: 14,
+              color: message.isUser ? Colors.white : Colors.grey[800],
+              height: 1.4,
+            ),
+            textDirection: _getTextDirection(),
+          ),
       ],
     );
   }

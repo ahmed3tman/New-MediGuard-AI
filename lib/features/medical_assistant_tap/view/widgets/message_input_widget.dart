@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'audio_recorder_widget.dart';
 
 class MessageInputWidget extends StatefulWidget {
   final Function(String) onSendMessage;
+  final Function(String)? onSendAudio;
   final bool isLoading;
   final bool isArabic;
 
   const MessageInputWidget({
     Key? key,
     required this.onSendMessage,
+    this.onSendAudio,
     required this.isLoading,
     required this.isArabic,
   }) : super(key: key);
@@ -35,11 +38,27 @@ class _MessageInputWidgetState extends State<MessageInputWidget> {
     }
   }
 
+  void _openAudioRecorder() {
+    if (widget.onSendAudio == null) return;
+
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: Colors.transparent,
+      builder: (context) => AudioRecorderWidget(
+        onAudioRecorded: (audioPath) {
+          widget.onSendAudio!(audioPath);
+        },
+        isArabic: widget.isArabic,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(left: 16, right: 16, bottom: 8, top: 8),
-     
+
       child: SafeArea(
         child: Row(
           children: [
@@ -51,7 +70,7 @@ class _MessageInputWidgetState extends State<MessageInputWidget> {
                 ),
                 child: Row(
                   children: [
-                   // const SizedBox(width: 5),
+                    // const SizedBox(width: 5),
                     Expanded(
                       child: TextField(
                         controller: _textController,
@@ -106,6 +125,35 @@ class _MessageInputWidgetState extends State<MessageInputWidget> {
             ),
 
             const SizedBox(width: 12),
+
+            // زر الميكروفون
+            if (widget.onSendAudio != null)
+              Container(
+                margin: const EdgeInsets.only(right: 8),
+                decoration: BoxDecoration(
+                  color: widget.isLoading ? Colors.grey[300] : Colors.blue[100],
+                  shape: BoxShape.circle,
+                ),
+                child: Material(
+                  color: Colors.transparent,
+                  child: InkWell(
+                    onTap: widget.isLoading ? null : _openAudioRecorder,
+                    borderRadius: BorderRadius.circular(25),
+                    child: Container(
+                      width: 50,
+                      height: 50,
+                      alignment: Alignment.center,
+                      child: Icon(
+                        Icons.mic,
+                        color: widget.isLoading
+                            ? Colors.grey[500]
+                            : Colors.blue[700],
+                        size: 24,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
 
             // زر الإرسال
             Container(

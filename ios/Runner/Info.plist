@@ -51,5 +51,7 @@
 		<false/>
 		<key>NSCameraUsageDescription</key>
 		<string>This app needs access to camera to scan QR codes for device identification</string>
+		<key>NSMicrophoneUsageDescription</key>
+		<string>This app needs microphone access to record voice messages for the medical assistant</string>
 	</dict>
 </plist>

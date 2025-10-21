@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../model/medical_assistant_models.dart';
 import 'medical_assistant_state.dart';
 import '../data/medical_assistant_service.dart';
+import '../../patient_records_tap/services/patient_api_service.dart';
 
 class MedicalAssistantCubit extends Cubit<MedicalAssistantState> {
   MedicalAssistantCubit() : super(MedicalAssistantInitial());
@@ -46,17 +47,7 @@ class MedicalAssistantCubit extends Cubit<MedicalAssistantState> {
       _messages = List.from(_savedChats[_currentPatientId]!);
     } else {
       _messages.clear();
-
-      // إضافة رسالة ترحيب بسيطة للمرة الأولى فقط
-      final welcomeMessage = ChatMessage(
-        id: DateTime.now().millisecondsSinceEpoch.toString(),
-        content: isArabic ? 'كيف يمكنني مساعدتك؟' : 'How can I help you?',
-        isUser: false,
-        timestamp: DateTime.now(),
-        type: MessageType.text,
-      );
-
-      _messages.add(welcomeMessage);
+      // لا تضف أي رسالة ترحيب ثابتة
     }
 
     // تحديث الأسئلة المقترحة
@@ -96,11 +87,44 @@ class MedicalAssistantCubit extends Cubit<MedicalAssistantState> {
 
       _messages.add(userMessage);
 
-      // استخدام الخدمة الجديدة مع البيانات الفعلية
-      final response = await MedicalAssistantService.sendMessage(
+      // تحويل جميع قيم DateTime في بيانات المريض إلى String
+      Map<String, dynamic> _encodeMap(Map<String, dynamic> map) {
+        return map.map((key, value) {
+          if (value is DateTime) {
+            return MapEntry(key, value.toIso8601String());
+          } else if (value is Map<String, dynamic>) {
+            return MapEntry(key, _encodeMap(value));
+          } else if (value is List) {
+            return MapEntry(
+              key,
+              value
+                  .map((e) => e is DateTime ? e.toIso8601String() : e)
+                  .toList(),
+            );
+          } else {
+            return MapEntry(key, value);
+          }
+        });
+      }
+
+      final encodedPatientData = _encodeMap(_currentPatientData);
+
+      // إرسال فقط deviceId للـ API (لتخفيف الحمل وتجنب مشاكل التحويل)
+      final simplePatientData = {
+        'deviceId': _currentPatientId,
+        'patientId': _currentPatientId,
+      };
+
+      debugPrint("🔍 Sending message with patient_id: $_currentPatientId");
+
+      // استخدام الخدمة الجديدة مع patient_id فقط
+      String response = await MedicalAssistantService.sendMessage(
         messageContent,
-        patientData: _currentPatientData,
+        patientData: simplePatientData,
       );
+
+      // إذا كان الرد خطأ 404 مع رسالة not found أو run analysis
+      // لا تعرض أي رسالة ثابتة، فقط الرد القادم من الAPI
 
       // إضافة رد المساعد
       final assistantMessage = ChatMessage(
@@ -270,6 +294,94 @@ class MedicalAssistantCubit extends Cubit<MedicalAssistantState> {
     BuildContext context,
   ) async {
     await sendMessage(question, context);
+  }
+
+  /// Send audio message
+  Future<void> sendAudio(String audioFilePath, BuildContext context) async {
+    _safeEmit(MedicalAssistantLoading());
+
+    try {
+      final locale = Localizations.localeOf(context);
+      final isArabic = locale.languageCode == 'ar';
+
+      // Add user voice message placeholder
+      final userMessage = ChatMessage(
+        id: DateTime.now().millisecondsSinceEpoch.toString(),
+        content: isArabic ? '🎤 رسالة صوتية' : '🎤 Voice message',
+        isUser: true,
+        timestamp: DateTime.now(),
+        type: MessageType.text,
+        audioPath: audioFilePath,
+        hasAudio: true,
+      );
+
+      _messages.add(userMessage);
+      _safeEmit(
+        MedicalAssistantChatUpdated(
+          messages: _messages,
+          suggestedQuestions: _suggestedQuestions,
+        ),
+      );
+
+      // Send to API
+      final response = await MedicalAssistantService.sendAudio(
+        audioFilePath,
+        patientId: _currentPatientId,
+      );
+
+      if (response.containsKey('error')) {
+        final errorMessage = ChatMessage(
+          id: (DateTime.now().millisecondsSinceEpoch + 1).toString(),
+          content: '⚠️ ${response['error']}',
+          isUser: false,
+          timestamp: DateTime.now(),
+          type: MessageType.text,
+        );
+        _messages.add(errorMessage);
+      } else {
+        // Add transcript if available
+        if (response['transcript'] != null &&
+            response['transcript'].toString().isNotEmpty) {
+          final transcriptMessage = ChatMessage(
+            id: (DateTime.now().millisecondsSinceEpoch + 1).toString(),
+            content: response['transcript'],
+            isUser: true,
+            timestamp: DateTime.now(),
+            type: MessageType.text,
+          );
+          _messages[_messages.length - 1] = transcriptMessage;
+        }
+
+        // Add bot reply
+        if (response['reply'] != null) {
+          final botMessage = ChatMessage(
+            id: (DateTime.now().millisecondsSinceEpoch + 2).toString(),
+            content: response['reply'],
+            isUser: false,
+            timestamp: DateTime.now(),
+            type: MessageType.text,
+            audioPath: response['reply_audio_path'],
+            hasAudio: response['reply_audio_path'] != null,
+          );
+          _messages.add(botMessage);
+        }
+      }
+
+      // Save conversation
+      _savedChats[_currentPatientId] = List.from(_messages);
+
+      // Update suggested questions
+      _updateSuggestedQuestions(isArabic);
+
+      _safeEmit(
+        MedicalAssistantChatUpdated(
+          messages: _messages,
+          suggestedQuestions: _suggestedQuestions,
+        ),
+      );
+    } catch (e) {
+      _safeEmit(MedicalAssistantError(message: 'حدث خطأ في إرسال الصوت: $e'));
+    }
   }
 
   /// إعادة تعيين المحادثة

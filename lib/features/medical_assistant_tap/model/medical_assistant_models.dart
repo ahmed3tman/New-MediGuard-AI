@@ -6,6 +6,8 @@ class ChatMessage {
   final DateTime timestamp;
   final MessageType type;
   final Map<String, dynamic>? metadata;
+  final String? audioPath;
+  final bool hasAudio;
 
   ChatMessage({
     required this.id,
@@ -14,6 +16,8 @@ class ChatMessage {
     required this.timestamp,
     this.type = MessageType.text,
     this.metadata,
+    this.audioPath,
+    this.hasAudio = false,
   });
 
   factory ChatMessage.fromJson(Map<String, dynamic> json) {
@@ -27,6 +31,8 @@ class ChatMessage {
         orElse: () => MessageType.text,
       ),
       metadata: json['metadata'],
+      audioPath: json['audioPath'],
+      hasAudio: json['hasAudio'] ?? false,
     );
   }
 
@@ -37,8 +43,29 @@ class ChatMessage {
       'isUser': isUser,
       'timestamp': timestamp.toIso8601String(),
       'type': type.toString(),
-      'metadata': metadata,
+      'metadata': _encodeMap(metadata),
+      'audioPath': audioPath,
+      'hasAudio': hasAudio,
     };
+  }
+
+  /// Helper to encode any DateTime in a map to String
+  static Map<String, dynamic>? _encodeMap(Map<String, dynamic>? map) {
+    if (map == null) return null;
+    return map.map((key, value) {
+      if (value is DateTime) {
+        return MapEntry(key, value.toIso8601String());
+      } else if (value is Map<String, dynamic>) {
+        return MapEntry(key, _encodeMap(value));
+      } else if (value is List) {
+        return MapEntry(
+          key,
+          value.map((e) => e is DateTime ? e.toIso8601String() : e).toList(),
+        );
+      } else {
+        return MapEntry(key, value);
+      }
+    });
   }
 
   ChatMessage copyWith({
@@ -48,6 +75,8 @@ class ChatMessage {
     DateTime? timestamp,
     MessageType? type,
     Map<String, dynamic>? metadata,
+    String? audioPath,
+    bool? hasAudio,
   }) {
     return ChatMessage(
       id: id ?? this.id,
@@ -56,6 +85,8 @@ class ChatMessage {
       timestamp: timestamp ?? this.timestamp,
       type: type ?? this.type,
       metadata: metadata ?? this.metadata,
+      audioPath: audioPath ?? this.audioPath,
+      hasAudio: hasAudio ?? this.hasAudio,
     );
   }
 }
@@ -119,7 +150,7 @@ class PatientAnalysis {
       'overallStatus': overallStatus,
       'severity': severity,
       'recommendations': recommendations,
-      'rawData': rawData,
+      'rawData': ChatMessage._encodeMap(rawData),
     };
   }
 }

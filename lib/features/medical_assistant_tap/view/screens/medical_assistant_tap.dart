@@ -97,6 +97,9 @@ class _MedicalAssistantScreenState extends State<MedicalAssistantScreen>
                 onSendMessage: (message) async {
                   await _cubit.sendMessage(message, context);
                 },
+                onSendAudio: (audioPath) async {
+                  await _cubit.sendAudio(audioPath, context);
+                },
                 isLoading:
                     state is MedicalAssistantLoading ||
                     state is MedicalAssistantAnalyzing,
