@@ -98,16 +98,36 @@ class PatientApiService {
       };
     }
 
-    final body = {
-      "patient_id": patientInfo?.deviceId ?? vitalSigns.deviceId,
-      "name": patientInfo?.patientName ?? vitalSigns.patientName,
-      "age": patientInfo?.age,
-      "gender": patientInfo?.gender.name,
-      "chronic_conditions": patientInfo?.chronicDiseases ?? [],
-      "notes": patientInfo?.notes,
-      "ecg_signal": ecgList.isNotEmpty ? ecgList : null,
-      "vitals": vitals,
-    };
+    // Build base body using PatientInfo if available (preferred) so we send
+    // full profile fields like notes, chronic conditions, blood type, phone.
+    final Map<String, dynamic> body = {};
+
+    if (patientInfo != null) {
+      // use toProfileJson and map keys to API expected names
+      final profile = patientInfo.toProfileJson();
+      body["patient_id"] = profile['deviceId'] ?? profile['id'];
+      body["name"] = profile['patientName'] ?? profile['name'];
+      body["age"] = profile['age'];
+      body["gender"] = profile['gender'];
+      body["chronic_conditions"] = profile['chronicDiseases'] ?? [];
+      body["notes"] = profile['notes'];
+      // include optional fields if present
+      if (profile['bloodType'] != null)
+        body['blood_type'] = profile['bloodType'];
+      if (profile['phoneNumber'] != null)
+        body['phone_number'] = profile['phoneNumber'];
+    } else {
+      // fallback to vitalSigns and partial info
+      body["patient_id"] = vitalSigns.deviceId;
+      body["name"] = vitalSigns.patientName;
+      body["age"] = null;
+      body["gender"] = null;
+      body["chronic_conditions"] = [];
+      body["notes"] = null;
+    }
+
+    body["ecg_signal"] = ecgList.isNotEmpty ? ecgList : null;
+    body["vitals"] = vitals;
 
     return _removeNulls(body);
   }

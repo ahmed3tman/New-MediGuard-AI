@@ -76,7 +76,8 @@ class _MessageInputWidgetState extends State<MessageInputWidget> {
                       child: TextField(
                         controller: _textController,
                         focusNode: _focusNode,
-                        enabled: !widget.isLoading,
+                        // Allow typing and sending even when the chat shows the remote "typing" indicator.
+                        enabled: true,
                         maxLines: null,
                         textInputAction: TextInputAction.send,
                         onSubmitted: (_) => _sendMessage(),
@@ -132,25 +133,19 @@ class _MessageInputWidgetState extends State<MessageInputWidget> {
               Container(
                 margin: const EdgeInsets.only(right: 8),
                 decoration: BoxDecoration(
-                  color: widget.isLoading ? Colors.grey[300] : Colors.blue[100],
+                  color: Colors.blue[100],
                   shape: BoxShape.circle,
                 ),
                 child: Material(
                   color: Colors.transparent,
                   child: InkWell(
-                    onTap: widget.isLoading ? null : _openAudioRecorder,
+                    onTap: _openAudioRecorder,
                     borderRadius: BorderRadius.circular(25),
                     child: Container(
                       width: 50,
                       height: 50,
                       alignment: Alignment.center,
-                      child: Icon(
-                        Icons.mic,
-                        color: widget.isLoading
-                            ? Colors.grey[500]
-                            : Colors.blue[700],
-                        size: 24,
-                      ),
+                      child: Icon(Icons.mic, color: Colors.blue[700], size: 24),
                     ),
                   ),
                 ),
@@ -162,36 +157,23 @@ class _MessageInputWidgetState extends State<MessageInputWidget> {
             // زر الإرسال
             Container(
               decoration: BoxDecoration(
-                color: widget.isLoading ? Colors.grey[400] : Colors.teal,
+                color: Colors.teal,
                 shape: BoxShape.circle,
               ),
               child: Material(
                 color: Colors.transparent,
                 child: InkWell(
-                  onTap: widget.isLoading ? null : _sendMessage,
+                  onTap: _sendMessage,
                   borderRadius: BorderRadius.circular(25),
                   child: Container(
                     width: 50,
                     height: 50,
                     alignment: Alignment.center,
-                    child: widget.isLoading
-                        ? SizedBox(
-                            width: 20,
-                            height: 20,
-                            child: CircularProgressIndicator(
-                              strokeWidth: 2,
-                              valueColor: AlwaysStoppedAnimation<Color>(
-                                Colors.white,
-                              ),
-                            ),
-                          )
-                        : Icon(
-                            widget.isArabic
-                                ? Icons.send_rounded
-                                : Icons.send_rounded,
-                            color: Colors.white,
-                            size: 24,
-                          ),
+                    child: Icon(
+                      Icons.send_rounded,
+                      color: Colors.white,
+                      size: 24,
+                    ),
                   ),
                 ),
               ),

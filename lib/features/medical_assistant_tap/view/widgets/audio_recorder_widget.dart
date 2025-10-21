@@ -45,9 +45,32 @@ class _AudioRecorderWidgetState extends State<AudioRecorderWidget> {
     // If autoStart is requested, try to start recording after a short delay
     if (widget.autoStart) {
       WidgetsBinding.instance.addPostFrameCallback((_) async {
-        final ok = await _ensureMicPermission();
-        if (ok && mounted) {
-          await _startRecording();
+        try {
+          // Request permission silently (will trigger the OS prompt if needed)
+          final status = await Permission.microphone.status;
+          if (!status.isGranted) {
+            final newStatus = await Permission.microphone.request();
+            if (newStatus.isGranted) {
+              if (mounted) await _startRecording();
+            } else {
+              // Don't show the custom dialog here; just inform user via SnackBar
+              if (mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    content: Text(
+                      widget.isArabic
+                          ? 'يرجى تفعيل إذن الميكروفون من إعدادات التطبيق.'
+                          : 'Please enable microphone permission from app settings.',
+                    ),
+                  ),
+                );
+              }
+            }
+          } else {
+            if (mounted) await _startRecording();
+          }
+        } catch (e) {
+          debugPrint('Auto-start permission/request error: $e');
         }
       });
     }
@@ -70,7 +93,7 @@ class _AudioRecorderWidgetState extends State<AudioRecorderWidget> {
     final status = await Permission.microphone.status;
     if (status.isGranted) return true;
 
-    // Try requesting permission
+    // Try requesting permission (may trigger OS prompt)
     final newStatus = await Permission.microphone.request();
     if (newStatus.isGranted) return true;
 
@@ -248,25 +271,27 @@ class _AudioRecorderWidgetState extends State<AudioRecorderWidget> {
           // ===== Compact recording card (no top handle/title) =====
           const SizedBox(height: 8),
 
-          // Recording indicator
-          if (_isRecording) ...[
-            Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: Colors.red.withOpacity(0.1),
+          // Single red mic indicator (remove the teal mic widget to avoid overlap)
+          Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: _isRecording
+                  ? Colors.red.withOpacity(0.1)
+                  : Colors.red.withOpacity(0.03),
+              shape: BoxShape.circle,
+            ),
+            child: Container(
+              width: 80,
+              height: 80,
+              decoration: const BoxDecoration(
+                color: Colors.red,
                 shape: BoxShape.circle,
               ),
-              child: Container(
-                width: 80,
-                height: 80,
-                decoration: const BoxDecoration(
-                  color: Colors.red,
-                  shape: BoxShape.circle,
-                ),
-                child: const Icon(Icons.mic, color: Colors.white, size: 40),
-              ),
+              child: const Icon(Icons.mic, color: Colors.white, size: 40),
             ),
-            const SizedBox(height: 16),
+          ),
+          const SizedBox(height: 16),
+          if (_isRecording) ...[
             Text(
               _formatDuration(_recordDuration),
               style: const TextStyle(
@@ -281,29 +306,9 @@ class _AudioRecorderWidgetState extends State<AudioRecorderWidget> {
               style: TextStyle(fontSize: 14, color: Colors.grey[600]),
             ),
           ] else ...[
-            Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: Colors.teal.withOpacity(0.1),
-                shape: BoxShape.circle,
-              ),
-              child: Container(
-                width: 80,
-                height: 80,
-                decoration: const BoxDecoration(
-                  color: Colors.teal,
-                  shape: BoxShape.circle,
-                ),
-                child: const Icon(
-                  Icons.mic_none,
-                  color: Colors.white,
-                  size: 40,
-                ),
-              ),
-            ),
-            const SizedBox(height: 16),
+            // When not recording we keep a minimal status (no teal widget)
             Text(
-              widget.isArabic ? 'اضغط للبدء' : 'Tap to start',
+              widget.isArabic ? 'جاهز للتسجيل' : 'Ready to record',
               style: TextStyle(fontSize: 14, color: Colors.grey[600]),
             ),
           ],
@@ -347,19 +352,54 @@ class _AudioRecorderWidgetState extends State<AudioRecorderWidget> {
               ],
             )
           else
-            ElevatedButton.icon(
-              onPressed: _startRecording,
-              icon: const Icon(Icons.mic),
-              label: Text(widget.isArabic ? 'ابدأ التسجيل' : 'Start Recording'),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.teal,
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 32,
-                  vertical: 16,
-                ),
-              ),
-            ),
+            // If autoStart is enabled we removed the explicit Start button
+            // and show a small status; otherwise keep the Start Recording button.
+            (widget.autoStart
+                ? Column(
+                    children: [
+                      const SizedBox(height: 8),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 20,
+                            height: 20,
+                            child: CircularProgressIndicator(
+                              strokeWidth: 2,
+                              valueColor: AlwaysStoppedAnimation<Color>(
+                                Colors.teal,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 12),
+                          Text(
+                            widget.isArabic
+                                ? 'جاري بدء التسجيل...'
+                                : 'Starting recording...',
+                            style: TextStyle(
+                              fontSize: 14,
+                              color: Colors.grey[600],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  )
+                : ElevatedButton.icon(
+                    onPressed: _startRecording,
+                    icon: const Icon(Icons.mic),
+                    label: Text(
+                      widget.isArabic ? 'ابدأ التسجيل' : 'Start Recording',
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.teal,
+                      foregroundColor: Colors.white,
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 32,
+                        vertical: 16,
+                      ),
+                    ),
+                  )),
 
           const SizedBox(height: 16),
         ],
