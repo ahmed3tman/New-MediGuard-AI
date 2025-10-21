@@ -1,0 +1,20 @@
+{
+  "dart.flutterSdkPath": "/Users/os/flutter/flutter",
+  "dart.analysisServerFolding": false,
+  "dart.previewAnalyzeAngularTemplates": false,
+  "dart.previewCommitCharacters": false,
+  "dart.previewLsp": false,
+  "dart.allowAnalytics": false,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.dart_tool": true,
+    "**/build": true,
+    ".yoyo": true
+  },
+  "cmake.sourceDirectory": "/Users/os/Desktop/G Project/Flutter app/spider_doctor/linux",
+  "java.configuration.updateBuildConfiguration": "automatic"
+}

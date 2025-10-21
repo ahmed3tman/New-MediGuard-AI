@@ -1,0 +1,1246 @@
+{
+  "aboutDeveloperName": "Ahmed Etman",
+  "@aboutDeveloperName": {
+    "description": "Developer's full name for About Developer dialog"
+  },
+  "aboutDeveloperTitle": "Biomedical Engineer\nMobile App Developer",
+  "@aboutDeveloperTitle": {
+    "description": "Developer's job title for About Developer dialog"
+  },
+  "aboutDeveloperFaculty": "Faculty of Applied Medical Sciences",
+  "@aboutDeveloperFaculty": {
+    "description": "Developer's faculty for About Developer dialog"
+  },
+  "aboutDeveloperDepartment": "Department of Biomedical Devices",
+  "@aboutDeveloperDepartment": {
+    "description": "Developer's department for About Developer dialog"
+  },
+  "aboutDeveloperUniversity": "Menoufia University",
+  "@aboutDeveloperUniversity": {
+    "description": "Developer's university for About Developer dialog"
+  },
+  "@@locale": "en",
+  "appTitle": "MediGuard AI",
+  "@appTitle": {
+    "description": "Application title"
+  },
+  "realTimeMonitoring": "Real Time Monitoring",
+  "@realTimeMonitoring": {
+    "description": "Real time monitoring title"
+  },
+  "realTimeMonitoringSystem": "Real Time Monitoring System",
+  "@realTimeMonitoringSystem": {
+    "description": "Real time monitoring system title"
+  },
+  "waitingForDeviceData": "Waiting for device data...",
+  "@waitingForDeviceData": {
+    "description": "Message shown when waiting for device data"
+  },
+  "@temperature": {
+    "description": "Temperature label"
+  },
+  "tellMeYourQuestion": "Tell me your question...",
+  "@tellMeYourQuestion": {
+    "description": "Placeholder text for question input"
+  },
+  "home": "Home",
+  "@home": {
+    "description": "Home navigation label"
+  },
+  "profile": "Profile",
+  "@profile": {
+    "description": "Profile navigation label"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "Settings navigation label"
+  },
+  "login": "Login",
+  "@login": {
+    "description": "Login button text"
+  },
+  "email": "Email",
+  "@email": {
+    "description": "Email input label"
+  },
+  "password": "Password",
+  "@password": {
+    "description": "Password input label"
+  },
+  "signIn": "Sign In",
+  "@signIn": {
+    "description": "Sign in button text"
+  },
+  "logout": "Logout",
+  "@logout": {
+    "description": "Logout button text"
+  },
+  "language": "Language",
+  "@language": {
+    "description": "Language setting label"
+  },
+  "english": "English",
+  "@english": {
+    "description": "English language option"
+  },
+  "arabic": "Arabic",
+  "@arabic": {
+    "description": "Arabic language option"
+  },
+  "selectLanguage": "Select Language",
+  "@selectLanguage": {
+    "description": "Select language dialog title"
+  },
+  "manageProfile": "Manage Profile",
+  "@manageProfile": {
+    "description": "Manage profile button text"
+  },
+  "continueToHome": "Continue to Home",
+  "@continueToHome": {
+    "description": "Continue to home button text"
+  },
+  "loading": "Loading...",
+  "@loading": {
+    "description": "Loading message"
+  },
+  "error": "Error",
+  "@error": {
+    "description": "Error message"
+  },
+  "devices": "Devices",
+  "@devices": {
+    "description": "Devices navigation label"
+  },
+  "criticalCases": "Critical Cases",
+  "@criticalCases": {
+    "description": "Critical cases navigation label"
+  },
+  "deviceStatus": "Device Status",
+  "@deviceStatus": {
+    "description": "Device status label"
+  },
+  "@heartRate": {
+    "description": "Heart rate label"
+  },
+  "@bloodPressure": {
+    "description": "Blood pressure label"
+  },
+  "oxygenSaturation": "Oxygen Saturation",
+  "@oxygenSaturation": {
+    "description": "Oxygen saturation label"
+  },
+  "normal": "Normal",
+  "@normal": {
+    "description": "Normal status"
+  },
+  "abnormal": "Abnormal",
+  "@abnormal": {
+    "description": "Abnormal status"
+  },
+  "connected": "Connected",
+  "@connected": {
+    "description": "Connected status"
+  },
+  "disconnected": "Disconnected",
+  "@disconnected": {
+    "description": "Disconnected status"
+  },
+  "@spo2": {
+    "description": "SpO2 label"
+  },
+  "dashboard": "Dashboard",
+  "@dashboard": {
+    "description": "Dashboard navigation label"
+  },
+  "myDevices": "My Devices",
+  "@myDevices": {
+    "description": "My devices menu item"
+  },
+  "helpSupport": "Help & Support",
+  "@helpSupport": {
+    "description": "Help and support menu item"
+  },
+  "signOut": "Sign Out",
+  "@signOut": {
+    "description": "Sign out menu item"
+  },
+  "signOutConfirm": "Are you sure you want to sign out from your account?",
+  "@signOutConfirm": {
+    "description": "Sign out confirmation message"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Cancel button"
+  },
+  "signingOut": "Signing out...",
+  "@signingOut": {
+    "description": "Signing out loading message"
+  },
+  "notifications": "Notifications",
+  "@notifications": {
+    "description": "Notifications setting"
+  },
+  "manageNotifications": "Manage app notifications",
+  "@manageNotifications": {
+    "description": "Manage notifications description"
+  },
+  "darkMode": "Dark Mode",
+  "@darkMode": {
+    "description": "Dark mode setting"
+  },
+  "toggleTheme": "Toggle between light and dark theme",
+  "@toggleTheme": {
+    "description": "Toggle theme description"
+  },
+  "privacy": "Privacy",
+  "@privacy": {
+    "description": "Privacy setting"
+  },
+  "privacySettings": "Privacy and security settings",
+  "@privacySettings": {
+    "description": "Privacy settings description"
+  },
+  "deviceSettings": "Device Settings",
+  "@deviceSettings": {
+    "description": "Device settings section"
+  },
+  "wifiSettings": "Wi-Fi Settings",
+  "@wifiSettings": {
+    "description": "Wi-Fi settings"
+  },
+  "manageConnections": "Manage Wi-Fi connections",
+  "@manageConnections": {
+    "description": "Manage connections description"
+  },
+  "bluetoothSettings": "Bluetooth Settings",
+  "@bluetoothSettings": {
+    "description": "Bluetooth settings"
+  },
+  "manageDevices": "Manage connected devices",
+  "aboutDeveloper": "About Developer",
+  "@aboutDeveloper": {
+    "description": "About developer menu item"
+  },
+  "aboutDeveloperBio": "Name: Ahmed Atman\nRole: Biomedical Engineer & Mobile App Developer\nFaculty: Faculty of Applied Medical Sciences\nDepartment: Biomedical Devices\nUniversity: Menoufia University\n\nEmail: <a href=\"mailto:ahmed.atman@example.com\">ahmed.atman@example.com</a>\nLinkedIn: <a href=\"https://linkedin.com/in/ahmed-atman\">linkedin.com/in/ahmed-atman</a>\nGitHub: <a href=\"https://github.com/ahmed3tman\">github.com/ahmed3tman</a>",
+  "@aboutDeveloperBio": {
+    "description": "Bio and contact info for About Developer dialog"
+  },
+  "@manageDevices": {
+    "description": "Manage devices description"
+  },
+  "support": "Support",
+  "@support": {
+    "description": "Support section"
+  },
+  "getHelp": "Get help and support",
+  "@getHelp": {
+    "description": "Get help description"
+  },
+  "about": "About",
+  "@about": {
+    "description": "About menu item"
+  },
+  "appVersion": "App version and information",
+  "@appVersion": {
+    "description": "App version description"
+  },
+  "appDescription": "A comprehensive medical monitoring system for real-time health tracking and device management.",
+  "@appDescription": {
+    "description": "App description"
+  },
+  "comingSoon": "Coming Soon",
+  "@comingSoon": {
+    "description": "Coming soon message"
+  },
+  "emergency": "Emergency",
+  "@emergency": {
+    "description": "Emergency navigation label"
+  },
+  "accountInformation": "Account Information",
+  "@accountInformation": {
+    "description": "Account information section"
+  },
+  "emailAddress": "Email Address",
+  "@emailAddress": {
+    "description": "Email address field"
+  },
+  "fullName": "Full Name",
+  "@fullName": {
+    "description": "Full name field"
+  },
+  "memberSince": "Member Since",
+  "@memberSince": {
+    "description": "Member since field"
+  },
+  "notAvailable": "Not available",
+  "@notAvailable": {
+    "description": "Not available text"
+  },
+  "unknownUser": "Unknown User",
+  "@unknownUser": {
+    "description": "Unknown user text"
+  },
+  "guestUser": "Guest User",
+  "@guestUser": {
+    "description": "Guest user text"
+  },
+  "medicalProfessional": "Medical Professional",
+  "@medicalProfessional": {
+    "description": "Medical professional text"
+  },
+  "accountType": "Account Type",
+  "@accountType": {
+    "description": "Account type field"
+  },
+  "guest": "Guest",
+  "@guest": {
+    "description": "Guest account type"
+  },
+  "full": "Full",
+  "@full": {
+    "description": "Full account type"
+  },
+  "pushNotifications": "Push Notifications",
+  "@pushNotifications": {
+    "description": "Push notifications feature"
+  },
+  "dataExport": "Data Export",
+  "@dataExport": {
+    "description": "Data export feature"
+  },
+  "deviceSharing": "Device Sharing",
+  "@deviceSharing": {
+    "description": "Device sharing feature"
+  },
+  "advancedAnalytics": "Advanced Analytics",
+  "@advancedAnalytics": {
+    "description": "Advanced analytics feature"
+  },
+  "addDevice": "Add Device",
+  "@addDevice": {
+    "description": "Add device button"
+  },
+  "addDeviceTooltip": "Add a new device",
+  "@addDeviceTooltip": {
+    "description": "Add device tooltip"
+  },
+  "unknown": "Unknown",
+  "@unknown": {
+    "description": "Unknown text"
+  },
+  "lastUpdated": "Last updated",
+  "@lastUpdated": {
+    "description": "Last updated text"
+  },
+  "notConnected": "Not Connected",
+  "@notConnected": {
+    "description": "Not connected status"
+  },
+  "addDeviceScreen": "Add Device",
+  "@addDeviceScreen": {
+    "description": "Add device screen title"
+  },
+  "deviceName": "Device Name",
+  "@deviceName": {
+    "description": "Device name field"
+  },
+  "enterDeviceName": "Enter device name",
+  "@enterDeviceName": {
+    "description": "Enter device name hint"
+  },
+  "deviceId": "Device ID",
+  "@deviceId": {
+    "description": "Device ID field"
+  },
+  "enterDeviceId": "Enter device ID",
+  "@enterDeviceId": {
+    "description": "Enter device ID hint"
+  },
+  "save": "Save",
+  "@save": {
+    "description": "Save button"
+  },
+  "deviceAddedSuccessfully": "Device added successfully",
+  "@deviceAddedSuccessfully": {
+    "description": "Device added success message"
+  },
+  "errorAddingDevice": "Error adding device",
+  "@errorAddingDevice": {
+    "description": "Error adding device message"
+  },
+  "pleaseEnterPatientName": "Please enter patient name",
+  "@pleaseEnterPatientName": {
+    "description": "Validation message for empty patient name"
+  },
+  "patientNameMinLength": "Patient name must be at least 2 characters long",
+  "@patientNameMinLength": {
+    "description": "Validation message for patient name length"
+  },
+  "pleaseEnterDeviceName": "Please enter device name",
+  "@pleaseEnterDeviceName": {
+    "description": "Please enter device name validation"
+  },
+  "pleaseEnterDeviceId": "Please enter device ID",
+  "@pleaseEnterDeviceId": {
+    "description": "Please enter device ID validation"
+  },
+  "deviceIdMinLength": "Device ID must be at least 3 characters",
+  "@deviceIdMinLength": {
+    "description": "Device ID minimum length validation"
+  },
+  "deviceNameMinLength": "Device name must be at least 2 characters",
+  "@deviceNameMinLength": {
+    "description": "Device name minimum length validation"
+  },
+  "deviceInfoMessage": "Make sure the device ID matches the physical device identifier. This will be used to receive real-time data.",
+  "@deviceInfoMessage": {
+    "description": "Device information message"
+  },
+  "errorSigningOut": "Error signing out",
+  "@errorSigningOut": {
+    "description": "Error signing out message"
+  },
+  "settingsComingSoon": "Settings - Coming Soon",
+  "@settingsComingSoon": {
+    "description": "Settings coming soon message"
+  },
+  "helpSupportComingSoon": "Help & Support - Coming Soon",
+  "@helpSupportComingSoon": {
+    "description": "Help and support coming soon message"
+  },
+  "deviceConnected": "Real-time data available",
+  "@deviceConnected": {
+    "description": "Device connected status"
+  },
+  "addToEmergency": "Add to Emergency",
+  "@addToEmergency": {
+    "description": "Add to emergency message"
+  },
+  "ecg": "ECG",
+  "@ecg": {
+    "description": "ECG label"
+  },
+  "noDevicesFound": "No devices found",
+  "@noDevicesFound": {
+    "description": "No devices found message"
+  },
+  "searchingForDevices": "Searching for devices...",
+  "@searchingForDevices": {
+    "description": "Searching for devices message"
+  },
+  "connectingToDevice": "Connecting to device...",
+  "@connectingToDevice": {
+    "description": "Connecting to device message"
+  },
+  "deviceConnectedSuccessfully": "Device connected successfully",
+  "@deviceConnectedSuccessfully": {
+    "description": "Device connected successfully message"
+  },
+  "failedToConnectToDevice": "Failed to connect to device",
+  "@failedToConnectToDevice": {
+    "description": "Failed to connect to device message"
+  },
+  "deviceDisconnected": "Device disconnected",
+  "@deviceDisconnected": {
+    "description": "Device disconnected message"
+  },
+  "retry": "Retry",
+  "@retry": {
+    "description": "Retry button"
+  },
+  "refresh": "Refresh",
+  "@refresh": {
+    "description": "Refresh button"
+  },
+  "searching": "Searching",
+  "@searching": {
+    "description": "Searching status"
+  },
+  "connecting": "Connecting",
+  "@connecting": {
+    "description": "Connecting status"
+  },
+  "success": "Success",
+  "@success": {
+    "description": "Success message"
+  },
+  "warning": "Warning",
+  "@warning": {
+    "description": "Warning message"
+  },
+  "info": "Information",
+  "@info": {
+    "description": "Information status"
+  },
+  "signUp": "Sign Up",
+  "@signUp": {
+    "description": "Sign up button text"
+  },
+  "createAccount": "Create Account",
+  "@createAccount": {
+    "description": "Create account button text"
+  },
+  "alreadyHaveAccount": "Already have an account?",
+  "@alreadyHaveAccount": {
+    "description": "Already have an account text"
+  },
+  "dontHaveAccount": "Don't have an account?",
+  "@dontHaveAccount": {
+    "description": "Don't have an account text"
+  },
+  "welcomeUser": "Welcome, {userName}!",
+  "@welcomeUser": {
+    "description": "Welcome message with user name",
+    "placeholders": {
+      "userName": {
+        "type": "String"
+      }
+    }
+  },
+  "accountCreatedSuccessfully": "Your account has been created successfully",
+  "@accountCreatedSuccessfully": {
+    "description": "Account created success message"
+  },
+  "whatYouCanDoNow": "What you can do now:",
+  "@whatYouCanDoNow": {
+    "description": "Features section title"
+  },
+  "addMedicalDevices": "Add Medical Devices",
+  "@addMedicalDevices": {
+    "description": "Add medical devices feature"
+  },
+  "addMedicalDevicesDesc": "Connect and monitor your medical devices in real-time",
+  "@addMedicalDevicesDesc": {
+    "description": "Add medical devices description"
+  },
+  "viewLiveData": "View Live Data",
+  "@viewLiveData": {
+    "description": "View live data feature"
+  },
+  "viewLiveDataDesc": "Monitor vital signs and device readings continuously",
+  "@viewLiveDataDesc": {
+    "description": "View live data description"
+  },
+  "manageProfileDesc": "Update your information and view account statistics",
+  "@manageProfileDesc": {
+    "description": "Manage profile description"
+  },
+  "pleaseEnterName": "Please enter your full name",
+  "@pleaseEnterName": {
+    "description": "Name validation message"
+  },
+  "nameMinLength": "Name must be at least 2 characters",
+  "@nameMinLength": {
+    "description": "Name minimum length validation"
+  },
+  "pleaseEnterEmail": "Please enter your email",
+  "@pleaseEnterEmail": {
+    "description": "Email validation message"
+  },
+  "pleaseEnterValidEmail": "Please enter a valid email",
+  "@pleaseEnterValidEmail": {
+    "description": "Valid email validation message"
+  },
+  "pleaseEnterPassword": "Please enter your password",
+  "@pleaseEnterPassword": {
+    "description": "Password validation message"
+  },
+  "passwordMinLength": "Password must be at least 6 characters",
+  "@passwordMinLength": {
+    "description": "Password minimum length validation"
+  },
+  "noDevicesAdded": "No Devices Added",
+  "@noDevicesAdded": {
+    "description": "Title shown when no devices are added"
+  },
+  "addFirstMedicalDevice": "Add your first medical device to start monitoring vital signs in real-time.",
+  "@addFirstMedicalDevice": {
+    "description": "Subtitle shown when no devices are added"
+  },
+  "addDemoDevice": "Add Demo Device",
+  "@addDemoDevice": {
+    "description": "Button text to add a demo device"
+  },
+  "loadingDevices": "Loading devices...",
+  "@loadingDevices": {
+    "description": "Loading message when fetching devices"
+  },
+  "justNow": "Just now",
+  "@justNow": {
+    "description": "Time indicator for recent updates"
+  },
+  "deleteDevice": "Delete Device",
+  "@deleteDevice": {
+    "description": "Delete device dialog title"
+  },
+  "deleteDeviceConfirm": "Are you sure you want to delete {deviceName}?",
+  "@deleteDeviceConfirm": {
+    "description": "Delete device confirmation message",
+    "placeholders": {
+      "deviceName": {
+        "type": "String"
+      }
+    }
+  },
+  "delete": "Delete",
+  "@delete": {
+    "description": "Delete button text"
+  },
+  "confirm": "Confirm",
+  "@confirm": {
+    "description": "Confirm button text"
+  },
+  "demo": "Demo",
+  "@demo": {
+    "description": "Demo label"
+  },
+  "noEmail": "No email",
+  "@noEmail": {
+    "description": "Default text when email is not available"
+  },
+  "languageTest": "Language Test",
+  "@languageTest": {
+    "description": "Language test screen title"
+  },
+  "saveEnglish": "Save English",
+  "@saveEnglish": {
+    "description": "Save English language button"
+  },
+  "saveArabic": "Save Arabic",
+  "@saveArabic": {
+    "description": "Save Arabic language button"
+  },
+  "reloadLanguage": "Reload Language",
+  "@reloadLanguage": {
+    "description": "Reload language button"
+  },
+  "savedLanguage": "Saved Language",
+  "@savedLanguage": {
+    "description": "Saved language label"
+  },
+  "currentLanguage": "Current Language",
+  "@currentLanguage": {
+    "description": "Current language label"
+  },
+  "notSet": "Not set",
+  "@notSet": {
+    "description": "Text when value is not set"
+  },
+  "pressSaveArabic": "Press \"Save Arabic\"",
+  "@pressSaveArabic": {
+    "description": "Instruction to press save arabic button"
+  },
+  "checkLanguageStillAr": "Check if language is still \"ar\"",
+  "@checkLanguageStillAr": {
+    "description": "Instruction to check if language is still arabic"
+  },
+  "patientDetails": "Patient Details",
+  "@patientDetails": {
+    "description": "Patient details title"
+  },
+  "doctorTab": "Patient Record",
+  "@doctorTab": {
+    "description": "Patient record tab title"
+  },
+  "vitalSigns": "Vital Signs",
+  "@vitalSigns": {
+    "description": "Vital signs section title"
+  },
+  "ecgMonitor": "ECG Monitor",
+  "@ecgMonitor": {
+    "description": "ECG monitor section title"
+  },
+  "noEcgDataAvailable": "No ECG data available",
+  "@noEcgDataAvailable": {
+    "description": "Message when no ECG data"
+  },
+  "waitingForDeviceConnection": "Waiting for device connection...",
+  "@waitingForDeviceConnection": {
+    "description": "Message waiting for device"
+  },
+  "monitoringControls": "Monitoring Controls",
+  "@monitoringControls": {
+    "description": "Monitoring controls section title"
+  },
+  "refreshData": "Refresh Data",
+  "@refreshData": {
+    "description": "Refresh data button"
+  },
+  "cleanupData": "Cleanup Data",
+  "@cleanupData": {
+    "description": "Cleanup data button"
+  },
+  "aiTab": "AI",
+  "@aiTab": {
+    "description": "AI assistant tab"
+  },
+  "loadingPatientData": "Loading patient data...",
+  "@loadingPatientData": {
+    "description": "Message shown while loading patient data"
+  },
+  "errorPrefix": "Error: ",
+  "@errorPrefix": {
+    "description": "Prefix for error messages"
+  },
+  "retryButton": "Retry",
+  "@retryButton": {
+    "description": "Retry button text"
+  },
+  "initializingPatientMonitoring": "Initializing patient monitoring...",
+  "@initializingPatientMonitoring": {
+    "description": "Message when initializing patient monitoring"
+  },
+  "deviceIdLabel": "Device ID: ",
+  "@deviceIdLabel": {
+    "description": "Label for displaying device ID in the UI"
+  },
+  "lastUpdatedLabel": "Last Updated: ",
+  "@lastUpdatedLabel": {
+    "description": "Label for displaying last updated time in the UI"
+  },
+  "liveStatus": "LIVE",
+  "@liveStatus": {
+    "description": "Live status indicator"
+  },
+  "offlineStatus": "OFFLINE",
+  "@offlineStatus": {
+    "description": "Offline status indicator"
+  },
+  "vitalSignsTitle": "Vital Signs",
+  "@vitalSignsTitle": {
+    "description": "Title for vital signs section"
+  },
+  "temperature": "Temperature",
+  "heartRate": "Heart Rate",
+  "respiratoryRate": "Respiratory Rate",
+  "bloodPressure": "Blood Pressure",
+  "spo2": "SpO₂",
+  "connectedStatus": "Connected",
+  "@connectedStatus": {
+    "description": "Connected status indicator"
+  },
+  "offlineStatusSmall": "Offline",
+  "@offlineStatusSmall": {
+    "description": "Offline status indicator (small)"
+  },
+  "ecgMonitorTitle": "ECG Monitor",
+  "@ecgMonitorTitle": {
+    "description": "Title for ECG monitor section"
+  },
+  "ecgConnectedStatus": "CONNECTED",
+  "@ecgConnectedStatus": {
+    "description": "ECG device connected status"
+  },
+  "ecgNotConnectedStatus": "NOT CONNECTED",
+  "@ecgNotConnectedStatus": {
+    "description": "ECG device not connected status"
+  },
+  "ecgDeviceNotConnectedError": "ECG Device Not Connected",
+  "@ecgDeviceNotConnectedError": {
+    "description": "Error message when ECG device is not connected"
+  },
+  "ecgDeviceNotConnectedHint": "Please check device connection and heart rate sensor",
+  "@ecgDeviceNotConnectedHint": {
+    "description": "Hint when ECG device is not connected"
+  },
+  "ecgChartTitle": "ECG Chart - {count} readings (HR: {hr} BPM)",
+  "@ecgChartTitle": {
+    "description": "Title for ECG chart with readings count and heart rate",
+    "placeholders": {
+      "count": {},
+      "hr": {}
+    }
+  },
+  "noEcgData": "No ECG data available",
+  "@noEcgData": {
+    "description": "Message when no ECG data is available"
+  },
+  "ecgTooltip": "ECG: {value} mV\n{time}",
+  "@ecgTooltip": {
+    "description": "Tooltip for ECG chart with value and time",
+    "placeholders": {
+      "value": {},
+      "time": {}
+    }
+  },
+  "monitoringControlsTitle": "Monitoring Controls",
+  "@monitoringControlsTitle": {
+    "description": "Title for monitoring controls section"
+  },
+  "monitoringControlsDescription": "• Real-time data updates every 2 seconds\n• ECG shows last 50 readings\n• All vital signs are monitored continuously\n• Abnormal values are highlighted in red",
+  "@monitoringControlsDescription": {
+    "description": "Description for monitoring controls section"
+  },
+  "timeJustNow": "Just now",
+  "@timeJustNow": {
+    "description": "Text for current time indicator"
+  },
+  "timeMinutesAgo": "{count}m ago",
+  "@timeMinutesAgo": {
+    "description": "Text for minutes ago indicator",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "timeHoursAgo": "{count}h ago",
+  "@timeHoursAgo": {
+    "description": "Text for hours ago indicator",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "deviceNotConnected": "Device Not Connected",
+  "@deviceNotConnected": {
+    "description": "Message when device is not connected"
+  },
+  "allPatientsStable": "All Patients Stable",
+  "@allPatientsStable": {
+    "description": "Message when all patients are stable"
+  },
+  "noCriticalCases": "There are currently no critical cases",
+  "@noCriticalCases": {
+    "description": "Message when there are no critical cases"
+  },
+  "addedToCriticalCases": "Added to critical cases",
+  "@addedToCriticalCases": {
+    "description": "Message when added to critical cases"
+  },
+  "added": "Added",
+  "@added": {
+    "description": "Message when an item or case is added"
+  },
+  "buyDeviceTitle": "Buy Device",
+  "@buyDeviceTitle": {
+    "description": "Title for the buy device dialog"
+  },
+  "buyDeviceDesc": "Please enter your information to complete the purchase request:",
+  "@buyDeviceDesc": {
+    "description": "Description for the buy device dialog"
+  },
+  "buyDeviceSuccess": "Your purchase request has been sent successfully! We will contact you soon.",
+  "@buyDeviceSuccess": {
+    "description": "Success message after sending a purchase request"
+  },
+  "buyDeviceError": "An error occurred while sending the request",
+  "@buyDeviceError": {
+    "description": "Error message when sending a purchase request fails"
+  },
+  "fullNameRequired": "Full name is required",
+  "@fullNameRequired": {
+    "description": "Validation message when full name is missing"
+  },
+  "phoneNumber": "Phone Number",
+  "@phoneNumber": {
+    "description": "Label for phone number input"
+  },
+  "phoneNumberRequired": "Phone number is required",
+  "@phoneNumberRequired": {
+    "description": "Validation message when phone number is missing"
+  },
+  "address": "Address",
+  "@address": {
+    "description": "Label for address input"
+  },
+  "addressRequired": "Address is required",
+  "@addressRequired": {
+    "description": "Validation message when address is missing"
+  },
+  "sendOrder": "Send Order",
+  "@sendOrder": {
+    "description": "Button text to send the purchase order"
+  },
+  "buyYourDevice": "Buy Your Device",
+  "@buyYourDevice": {
+    "description": "Button text to buy a device"
+  },
+  "qrScannerTooltip": "Scan QR Code",
+  "@qrScannerTooltip": {
+    "description": "Tooltip for QR scanner button"
+  },
+  "scanDeviceIdQR": "Scan Device ID",
+  "@scanDeviceIdQR": {
+    "description": "QR scanner dialog title"
+  },
+  "cameraNotAccessible": "Cannot access camera. Please enter manually",
+  "@cameraNotAccessible": {
+    "description": "Error message when camera is not accessible"
+  },
+  "deviceIdScannedSuccessfully": "Device ID scanned successfully: {deviceId}",
+  "@deviceIdScannedSuccessfully": {
+    "description": "Success message for scanned device ID",
+    "placeholders": {
+      "deviceId": {
+        "type": "String"
+      }
+    }
+  },
+  "deviceIdEnteredManually": "Device ID entered: {deviceId}",
+  "@deviceIdEnteredManually": {
+    "description": "Success message for manually entered device ID",
+    "placeholders": {
+      "deviceId": {
+        "type": "String"
+      }
+    }
+  },
+  "deviceSerialNotFound": "No registered device matches the serial {deviceId}. Please double-check the number and try again.",
+  "@deviceSerialNotFound": {
+    "description": "Shown when a device serial number is not found in the database",
+    "placeholders": {
+      "deviceId": {
+        "type": "String",
+        "example": "ABC-123"
+      }
+    }
+  },
+  "deviceIdInfo": "Device ID is the number on the device label or you can scan it using the QR code attached to the device",
+  "@deviceIdInfo": {
+    "description": "Information about device ID"
+  },
+  "patientInformation": "Patient Information",
+  "@patientInformation": {
+    "description": "Patient information section title"
+  },
+  "patientName": "Patient Name",
+  "@patientName": {
+    "description": "Patient name field label"
+  },
+  "enterPatientName": "Enter patient name",
+  "@enterPatientName": {
+    "description": "Patient name field hint"
+  },
+  "patientAge": "Patient Age",
+  "@patientAge": {
+    "description": "Patient age field label"
+  },
+  "enterPatientAge": "Enter patient age",
+  "@enterPatientAge": {
+    "description": "Patient age field hint"
+  },
+  "pleaseEnterPatientAge": "Please enter patient age",
+  "@pleaseEnterPatientAge": {
+    "description": "Patient age validation message"
+  },
+  "validAgeRange": "Please enter a valid age (1-150)",
+  "@validAgeRange": {
+    "description": "Patient age range validation message"
+  },
+  "gender": "Gender",
+  "@gender": {
+    "description": "Gender field label"
+  },
+  "male": "Male",
+  "@male": {
+    "description": "Male gender option"
+  },
+  "female": "Female",
+  "@female": {
+    "description": "Female gender option"
+  },
+  "bloodType": "Blood Type",
+  "@bloodType": {
+    "description": "Blood type field label"
+  },
+  "phoneNumberOptional": "Phone Number (Optional)",
+  "@phoneNumberOptional": {
+    "description": "Phone number field label"
+  },
+  "enterPhoneNumber": "Enter phone number",
+  "@enterPhoneNumber": {
+    "description": "Phone number field hint"
+  },
+  "validPhoneNumber": "Please enter a valid phone number (10 digits)",
+  "@validPhoneNumber": {
+    "description": "Phone number validation message"
+  },
+  "chronicDiseases": "Chronic Diseases",
+  "@chronicDiseases": {
+    "description": "Chronic diseases field label"
+  },
+  "selectChronicDiseases": "Select chronic diseases",
+  "@selectChronicDiseases": {
+    "description": "Chronic diseases field hint"
+  },
+  "none": "None",
+  "@none": {
+    "description": "None option for chronic diseases"
+  },
+  "diabetes": "Diabetes",
+  "@diabetes": {
+    "description": "Diabetes chronic disease"
+  },
+  "hypertension": "Hypertension",
+  "@hypertension": {
+    "description": "Hypertension chronic disease"
+  },
+  "heartDisease": "Heart Disease",
+  "@heartDisease": {
+    "description": "Heart disease chronic disease"
+  },
+  "asthma": "Asthma",
+  "@asthma": {
+    "description": "Asthma chronic disease"
+  },
+  "arthritis": "Arthritis",
+  "@arthritis": {
+    "description": "Arthritis chronic disease"
+  },
+  "kidneyDisease": "Kidney Disease",
+  "@kidneyDisease": {
+    "description": "Kidney disease chronic disease"
+  },
+  "liverDisease": "Liver Disease",
+  "@liverDisease": {
+    "description": "Liver disease chronic disease"
+  },
+  "cancer": "Cancer",
+  "@cancer": {
+    "description": "Cancer chronic disease"
+  },
+  "epilepsy": "Epilepsy",
+  "@epilepsy": {
+    "description": "Epilepsy chronic disease"
+  },
+  "depression": "Depression",
+  "@depression": {
+    "description": "Depression chronic disease"
+  },
+  "anxietyDisorders": "Anxiety Disorders",
+  "@anxietyDisorders": {
+    "description": "Anxiety disorders chronic disease"
+  },
+  "osteoporosis": "Osteoporosis",
+  "@osteoporosis": {
+    "description": "Osteoporosis chronic disease"
+  },
+  "thyroidDisease": "Thyroid Disease",
+  "@thyroidDisease": {
+    "description": "Thyroid disease chronic disease"
+  },
+  "cholesterol": "Cholesterol",
+  "@cholesterol": {
+    "description": "Cholesterol chronic disease"
+  },
+  "digestiveDisorders": "Digestive Disorders",
+  "@digestiveDisorders": {
+    "description": "Digestive disorders chronic disease"
+  },
+  "numberOfSelectedDiseases": "{count} diseases selected",
+  "@numberOfSelectedDiseases": {
+    "description": "Number of selected chronic diseases",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectChronicDiseasesTitle": "Select Chronic Diseases",
+  "@selectChronicDiseasesTitle": {
+    "description": "Chronic diseases bottom sheet title"
+  },
+  "confirmSelection": "Confirm",
+  "@confirmSelection": {
+    "description": "Confirm selection button"
+  },
+  "notes": "Notes",
+  "@notes": {
+    "description": "Notes field label"
+  },
+  "addPatientNotes": "Add any additional notes about the patient...",
+  "@addPatientNotes": {
+    "description": "Notes field hint"
+  },
+  "patientDataInfo": "Patient data will be saved locally and linked to the device to provide more accurate medical analysis",
+  "@patientDataInfo": {
+    "description": "Information about patient data storage"
+  },
+  "addDeviceAndPatient": "Add Device and Patient",
+  "@addDeviceAndPatient": {
+    "description": "Add device and patient button text"
+  },
+  "deviceAddedAndPatientSaved": "Device and patient data added successfully",
+  "@deviceAddedAndPatientSaved": {
+    "description": "Success message for adding device and patient"
+  },
+  "pointCameraToQR": "Point the camera at the device's QR code",
+  "@pointCameraToQR": {
+    "description": "QR scanner instruction"
+  },
+  "manualDeviceIdEntry": "Manual Device ID Entry",
+  "@manualDeviceIdEntry": {
+    "description": "Manual device ID dialog title"
+  },
+  "enterDeviceIdManually": "Please enter device ID",
+  "@enterDeviceIdManually": {
+    "description": "Manual device ID validation message"
+  },
+  "deviceIdMinLengthManual": "Device ID must be at least 3 characters",
+  "@deviceIdMinLengthManual": {
+    "description": "Manual device ID length validation"
+  },
+  "add": "Add",
+  "@add": {
+    "description": "Add button text"
+  },
+  "editPatientInfo": "Edit Patient Information",
+  "@editPatientInfo": {
+    "description": "Edit patient info screen title"
+  },
+  "updatePatientInfo": "Update Patient Information",
+  "@updatePatientInfo": {
+    "description": "Update patient info section title"
+  },
+  "patientInfoUpdatedSuccessfully": "Patient information updated successfully",
+  "@patientInfoUpdatedSuccessfully": {
+    "description": "Success message for updating patient info"
+  },
+  "saveChanges": "Save Changes",
+  "@saveChanges": {
+    "description": "Save changes button text"
+  },
+  "patientDataCard": "Patient Data",
+  "@patientDataCard": {
+    "description": "Patient data card title"
+  },
+  "edit": "Edit",
+  "@edit": {
+    "description": "Edit button text"
+  },
+  "deviceIdDisplay": "Device ID:",
+  "@deviceIdDisplay": {
+    "description": "Device ID display label"
+  },
+  "patientNameDisplay": "Patient Name:",
+  "@patientNameDisplay": {
+    "description": "Patient name display label"
+  },
+  "ageDisplay": "Age:",
+  "@ageDisplay": {
+    "description": "Age display label"
+  },
+  "yearsOld": "{age} years old",
+  "@yearsOld": {
+    "description": "Age display with years",
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "genderDisplay": "Gender:",
+  "@genderDisplay": {
+    "description": "Gender display label"
+  },
+  "bloodTypeDisplay": "Blood Type",
+  "@bloodTypeDisplay": {
+    "description": "Blood type display label"
+  },
+  "phoneNumberDisplay": "Phone Number",
+  "@phoneNumberDisplay": {
+    "description": "Phone number display label"
+  },
+  "chronicDiseasesDisplay": "Chronic Diseases",
+  "@chronicDiseasesDisplay": {
+    "description": "Chronic diseases display label"
+  },
+  "notesDisplay": "Notes",
+  "@notesDisplay": {
+    "description": "Notes display label"
+  },
+  "notSpecified": "Not specified",
+  "@notSpecified": {
+    "description": "Not specified text"
+  },
+  "noNotes": "No notes",
+  "@noNotes": {
+    "description": "No notes text"
+  },
+  "lastUpdate": "Last updated: {time}",
+  "@lastUpdate": {
+    "description": "Last update time display",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "nowTime": "Now",
+  "@nowTime": {
+    "description": "Current time indicator"
+  },
+  "minutesAgo": "{minutes}m ago",
+  "@minutesAgo": {
+    "description": "Minutes ago time indicator",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "hoursAgo": "{hours}h ago",
+  "@hoursAgo": {
+    "description": "Hours ago time indicator",
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      }
+    }
+  },
+  "daysAgo": "{days}d ago",
+  "@daysAgo": {
+    "description": "Days ago time indicator",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "scanDeviceQR": "Scan Device QR Code",
+  "@scanDeviceQR": {
+    "description": "QR scanner dialog title"
+  },
+  "qrScanInstructions": "Point the camera at the medical device QR code",
+  "@qrScanInstructions": {
+    "description": "QR scan instructions text"
+  },
+  "enterManually": "Enter Manually",
+  "@enterManually": {
+    "description": "Manual entry option"
+  },
+  "manualEntryInstructions": "Please enter the medical device ID manually",
+  "@manualEntryInstructions": {
+    "description": "Manual entry instructions text"
+  },
+  "deviceIdTooShort": "Device ID is too short (minimum 3 characters)",
+  "@deviceIdTooShort": {
+    "description": "Error message when device ID is too short"
+  },
+  "age": "Age",
+  "@age": {
+    "description": "Age label"
+  },
+  "years": "years",
+  "@years": {
+    "description": "Years unit"
+  },
+  "phone": "Phone",
+  "@phone": {
+    "description": "Phone label"
+  },
+  "notUpdated": "Not updated",
+  "@notUpdated": {
+    "description": "Text when there is no update"
+  },
+  "unspecifiedBloodType": "Not specified",
+  "@unspecifiedBloodType": {
+    "description": "Unspecified option for blood type"
+  },
+  "noChronicDiseases": "None",
+  "@noChronicDiseases": {
+    "description": "None option for chronic diseases"
+  },
+  "noChronicDiseasesSelected": "No chronic diseases selected",
+  "@noChronicDiseasesSelected": {
+    "description": "Message when no chronic diseases are selected"
+  }
+}

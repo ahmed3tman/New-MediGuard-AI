@@ -1,0 +1,522 @@
+{
+  "aboutDeveloperName": "أحمد عتمان",
+  "@aboutDeveloperName": {
+    "description": "اسم المطور الكامل لعرضه في نافذة عن المطور"
+  },
+  "aboutDeveloperTitle": "مهندس أجهزة طبية\nمطور تطبيقات موبايل",
+  "@aboutDeveloperTitle": {
+    "description": "المسمى الوظيفي للمطور لعرضه في نافذة عن المطور"
+  },
+  "aboutDeveloperFaculty": "كلية العلوم الطبية التطبيقية",
+  "@aboutDeveloperFaculty": {
+    "description": "كلية المطور لعرضها في نافذة عن المطور"
+  },
+  "aboutDeveloperDepartment": "قسم الأجهزة الطبية الحيوية",
+  "@aboutDeveloperDepartment": {
+    "description": "قسم المطور لعرضه في نافذة عن المطور"
+  },
+  "aboutDeveloperUniversity": "جامعة المنوفية",
+  "@aboutDeveloperUniversity": {
+    "description": "جامعة المطور لعرضها في نافذة عن المطور"
+  },
+  "@@locale": "ar",
+  "appTitle": "MediGuard AI",
+  "@appTitle": {
+    "description": "عنوان التطبيق"
+  },
+  "realTimeMonitoring": "المراقبة المباشرة",
+  "realTimeMonitoringSystem": "نظام المراقبة في الوقت الفعلي",
+  "waitingForDeviceData": "في انتظار بيانات الجهاز...",
+  "temperature": "الحرارة",
+  "tellMeYourQuestion": "أخبرني بسؤالك...",
+  "home": "الرئيسية",
+  "profile": "الملف الشخصي",
+  "settings": "الإعدادات",
+  "login": "تسجيل الدخول",
+  "email": "البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "signIn": "تسجيل الدخول",
+  "logout": "تسجيل الخروج",
+  "language": "اللغة",
+  "english": "الإنجليزية",
+  "arabic": "العربية",
+  "selectLanguage": "اختر اللغة",
+  "manageProfile": "إدارة الملف الشخصي",
+  "continueToHome": "المتابعة إلى الرئيسية",
+  "loading": "جاري التحميل...",
+  "error": "خطأ",
+  "deviceStatus": "حالة الجهاز",
+  "heartRate": "نبضات القلب",
+  "respiratoryRate": "معدل التنفس",
+  "bloodPressure": "ضغط الدم",
+  "oxygenSaturation": "تشبع الأكسجين",
+  "normal": "طبيعي",
+  "abnormal": "غير طبيعي",
+  "disconnected": "منقطع",
+  "dashboard": "لوحة التحكم",
+  "myDevices": "أجهزتي",
+  "helpSupport": "المساعدة والدعم",
+  "signOut": "تسجيل الخروج",
+  "signOutConfirm": "هل أنت متأكد من أنك تريد تسجيل الخروج من حسابك؟",
+  "cancel": "إلغاء",
+  "signingOut": "جاري تسجيل الخروج...",
+  "notifications": "الإشعارات",
+  "manageNotifications": "إدارة إشعارات التطبيق",
+  "darkMode": "الوضع المظلم",
+  "toggleTheme": "التبديل بين الوضع الفاتح والمظلم",
+  "privacy": "الخصوصية",
+  "privacySettings": "إعدادات الخصوصية والأمان",
+  "deviceSettings": "إعدادات الجهاز",
+  "wifiSettings": "إعدادات الواي فاي",
+  "manageConnections": "إدارة اتصالات الواي فاي",
+  "bluetoothSettings": "إعدادات البلوتوث",
+  "manageDevices": "إدارة الأجهزة المتصلة",
+  "aboutDeveloper": "عن المطور",
+  "@aboutDeveloper": {
+    "description": "عن المطور في القائمة الجانبية"
+  },
+  "aboutDeveloperBio": "الاسم: أحمد عتمان\nالوظيفة: مهندس أجهزة طبية ومطور تطبيقات موبايل\nالكلية: كلية العلوم الطبية التطبيقية\nالقسم: قسم الأجهزة الطبية الحيوية\nالجامعة: جامعة المنوفية\n\nالبريد الإلكتروني: <a href=\"mailto:ahmed.atman@example.com\">ahmed.atman@example.com</a>\nلينكدإن: <a href=\"https://linkedin.com/in/ahmed-atman\">linkedin.com/in/ahmed-atman</a>\nجيت هب: <a href=\"https://github.com/ahmed3tman\">github.com/ahmed3tman</a>",
+  "@aboutDeveloperBio": {
+    "description": "سيرة المطور ومعلومات التواصل لعرضها في نافذة عن المطور"
+  },
+  "support": "الدعم",
+  "getHelp": "الحصول على المساعدة والدعم",
+  "about": "حول",
+  "appVersion": "إصدار التطبيق والمعلومات",
+  "appDescription": "نظام مراقبة طبية شامل لتتبع الصحة في الوقت الفعلي وإدارة الأجهزة.",
+  "comingSoon": "قريباً",
+  "criticalCases": "الحالات الحرجة",
+  "devices": "الأجهزة",
+  "emergency": "الطوارئ",
+  "accountInformation": "معلومات الحساب",
+  "emailAddress": "عنوان البريد الإلكتروني",
+  "fullName": "الاسم الكامل",
+  "memberSince": "عضو منذ",
+  "notAvailable": "غير متاح",
+  "unknownUser": "مستخدم غير معروف",
+  "guestUser": "مستخدم ضيف",
+  "medicalProfessional": "أخصائي طبي",
+  "accountType": "نوع الحساب",
+  "guest": "ضيف",
+  "full": "كامل",
+  "pushNotifications": "الإشعارات الفورية",
+  "dataExport": "تصدير البيانات",
+  "deviceSharing": "مشاركة الجهاز",
+  "advancedAnalytics": "التحليلات المتقدمة",
+  "addDevice": "إضافة جهاز",
+  "addDeviceTooltip": "إضافة جهاز جديد",
+  "unknown": "غير معروف",
+  "lastUpdated": "آخر تحديث",
+  "addDeviceScreen": "إضافة جهاز",
+  "deviceName": "اسم الجهاز",
+  "enterDeviceName": "أدخل اسم الجهاز",
+  "deviceId": "معرف الجهاز",
+  "enterDeviceId": "أدخل معرف الجهاز",
+  "save": "حفظ",
+  "deviceAddedSuccessfully": "تم إضافة الجهاز بنجاح",
+  "errorAddingDevice": "خطأ في إضافة الجهاز",
+  "pleaseEnterDeviceName": "يرجى إدخال اسم الجهاز",
+  "pleaseEnterPatientName": "يرجى إدخال اسم المريض",
+  "patientNameMinLength": "اسم المريض يجب أن يكون حرفين على الأقل",
+  "pleaseEnterDeviceId": "يرجى إدخال معرف الجهاز",
+  "deviceIdMinLength": "معرف الجهاز يجب أن يكون 3 أحرف على الأقل",
+  "deviceNameMinLength": "اسم الجهاز يجب أن يكون حرفين على الأقل",
+  "@deviceNameMinLength": {
+    "description": "Device name minimum length validation"
+  },
+  "deviceInfoMessage": "تأكد من أن معرف الجهاز يتطابق مع معرف الجهاز الفعلي. سيتم استخدامه لاستقبال البيانات في الوقت الفعلي.",
+  "errorSigningOut": "خطأ في تسجيل الخروج",
+  "settingsComingSoon": "الإعدادات - قريباً",
+  "helpSupportComingSoon": "المساعدة والدعم - قريباً",
+  "deviceConnected": "البيانات متاحة في الوقت الفعلي",
+  "ecg": "تخطيط القلب",
+  "spo2": "الأكسجين",
+  "noDevicesFound": "لم يتم العثور على أجهزة",
+  "searchingForDevices": "البحث عن الأجهزة...",
+  "connectingToDevice": "الاتصال بالجهاز...",
+  "deviceConnectedSuccessfully": "تم الاتصال بالجهاز بنجاح",
+  "failedToConnectToDevice": "فشل في الاتصال بالجهاز",
+  "deviceDisconnected": "انقطع الاتصال بالجهاز",
+  "retry": "إعادة المحاولة",
+  "refresh": "تحديث",
+  "addToEmergency": "إضافة للطوارئ",
+  "searching": "البحث",
+  "connecting": "الاتصال",
+  "success": "نجح",
+  "warning": "تحذير",
+  "info": "معلومات",
+  "signUp": "إنشاء حساب",
+  "createAccount": "إنشاء حساب",
+  "alreadyHaveAccount": "لديك حساب بالفعل؟",
+  "dontHaveAccount": "ليس لديك حساب؟",
+  "welcomeUser": "مرحباً، {userName}!",
+  "accountCreatedSuccessfully": "تم إنشاء حسابك بنجاح",
+  "whatYouCanDoNow": "ما يمكنك فعله الآن:",
+  "addMedicalDevices": "إضافة الأجهزة الطبية",
+  "addMedicalDevicesDesc": "اربط وراقب أجهزتك الطبية في الوقت الفعلي",
+  "viewLiveData": "عرض البيانات المباشرة",
+  "viewLiveDataDesc": "راقب العلامات الحيوية وقراءات الأجهزة بشكل مستمر",
+  "manageProfileDesc": "قم بتحديث معلوماتك وعرض إحصائيات الحساب",
+  "pleaseEnterName": "يرجى إدخال اسمك الكامل",
+  "nameMinLength": "الاسم يجب أن يكون حرفين على الأقل",
+  "pleaseEnterEmail": "يرجى إدخال بريدك الإلكتروني",
+  "pleaseEnterValidEmail": "يرجى إدخال بريد إلكتروني صحيح",
+  "pleaseEnterPassword": "يرجى إدخال كلمة المرور",
+  "passwordMinLength": "كلمة المرور يجب أن تكون 6 أحرف على الأقل",
+  "noDevicesAdded": "لم تتم إضافة أجهزة",
+  "addFirstMedicalDevice": "أضف جهازك الطبي الأول لبدء مراقبة العلامات الحيوية في الوقت الفعلي.",
+  "addDemoDevice": "إضافة جهاز تجريبي",
+  "loadingDevices": "جاري تحميل الأجهزة...",
+  "justNow": "الآن",
+  "deleteDevice": "حذف الجهاز",
+  "deleteDeviceConfirm": "هل أنت متأكد أنك تريد حذف {deviceName}؟",
+  "delete": "حذف",
+  "confirm": "تأكيد",
+  "demo": "تجريبي",
+  "noEmail": "لا يوجد بريد إلكتروني",
+  "languageTest": "اختبار اللغة",
+  "saveEnglish": "حفظ الإنجليزية",
+  "saveArabic": "حفظ العربية",
+  "reloadLanguage": "إعادة تحميل اللغة",
+  "savedLanguage": "اللغة المحفوظة",
+  "currentLanguage": "اللغة الحالية",
+  "notSet": "غير محدد",
+  "pressSaveArabic": "اضغط على \"حفظ العربية\"",
+  "checkLanguageStillAr": "تحقق إذا كانت اللغة لا تزال \"ar\"",
+  "patientDetails": "تفاصيل المريض",
+  "doctorTab": "سجل المريض",
+  "vitalSigns": "العلامات الحيوية",
+  "ecgMonitor": "مراقب تخطيط القلب",
+  "connected": "متصل",
+  "notConnected": "غير متصل",
+  "noEcgDataAvailable": "لا توجد بيانات تخطيط قلب متاحة",
+  "waitingForDeviceConnection": "في انتظار اتصال الجهاز...",
+  "monitoringControls": "أدوات التحكم في المراقبة",
+  "refreshData": "تحديث البيانات",
+  "cleanupData": "تنظيف البيانات",
+  "aiTab": "المساعد الذكي",
+  "loadingPatientData": "جاري تحميل بيانات المريض...",
+  "errorPrefix": "خطأ: ",
+  "retryButton": "إعادة المحاولة",
+  "initializingPatientMonitoring": "جاري تهيئة مراقبة المريض...",
+  "deviceIdLabel": "معرف الجهاز: ",
+  "@deviceIdLabel": {
+    "description": "نص لعرض معرف الجهاز في واجهة المستخدم"
+  },
+  "lastUpdatedLabel": "آخر تحديث: ",
+  "@lastUpdatedLabel": {
+    "description": "نص لعرض آخر تحديث في واجهة المستخدم"
+  },
+  "liveStatus": "مباشر",
+  "@liveStatus": {
+    "description": "حالة البث المباشر للبيانات"
+  },
+  "offlineStatus": "غير متصل",
+  "@offlineStatus": {
+    "description": "حالة عدم الاتصال"
+  },
+  "vitalSignsTitle": "العلامات الحيوية",
+  "@vitalSignsTitle": {
+    "description": "عنوان قسم العلامات الحيوية"
+  },
+  "connectedStatus": "متصل",
+  "@connectedStatus": {
+    "description": "حالة الاتصال"
+  },
+  "offlineStatusSmall": "غير متصل",
+  "@offlineStatusSmall": {
+    "description": "حالة عدم الاتصال بحجم صغير"
+  },
+  "ecgMonitorTitle": "مراقب القلب",
+  "@ecgMonitorTitle": {
+    "description": "عنوان قسم مراقب القلب"
+  },
+  "ecgConnectedStatus": "متصل",
+  "@ecgConnectedStatus": {
+    "description": "حالة اتصال جهاز القلب"
+  },
+  "ecgNotConnectedStatus": "غير متصل",
+  "@ecgNotConnectedStatus": {
+    "description": "حالة عدم اتصال جهاز القلب"
+  },
+  "ecgDeviceNotConnectedError": "جهاز القلب غير متصل",
+  "@ecgDeviceNotConnectedError": {
+    "description": "رسالة خطأ عند عدم اتصال جهاز القلب"
+  },
+  "ecgDeviceNotConnectedHint": "يرجى التحقق من اتصال الجهاز ومستشعر نبضات القلب",
+  "@ecgDeviceNotConnectedHint": {
+    "description": "تلميح عند عدم اتصال جهاز القلب"
+  },
+  "ecgChartTitle": "مخطط القلب - {count} قراءة (نبض: {hr} ن/د)",
+  "@ecgChartTitle": {
+    "description": "عنوان مخطط القلب مع عدد القراءات ونبض القلب",
+    "placeholders": {
+      "count": {},
+      "hr": {}
+    }
+  },
+  "noEcgData": "لا توجد بيانات لمخطط القلب",
+  "@noEcgData": {
+    "description": "رسالة عند عدم توفر بيانات لمخطط القلب"
+  },
+  "ecgTooltip": "القلب: {value} mV\n{time}",
+  "@ecgTooltip": {
+    "description": "تولتيب مخطط القلب مع القيمة والوقت",
+    "placeholders": {
+      "value": {},
+      "time": {}
+    }
+  },
+  "monitoringControlsTitle": "أدوات المراقبة",
+  "@monitoringControlsTitle": {
+    "description": "عنوان قسم أدوات المراقبة"
+  },
+  "monitoringControlsDescription": "• تحديث البيانات كل ثانيتين\n• مخطط القلب يعرض آخر 50 قراءة\n• يتم مراقبة جميع العلامات الحيوية باستمرار\n• يتم تمييز القيم غير الطبيعية باللون الأحمر",
+  "@monitoringControlsDescription": {
+    "description": "وصف أدوات المراقبة"
+  },
+  "timeJustNow": "الآن",
+  "@timeJustNow": {
+    "description": "نص يعبر عن الوقت الحالي"
+  },
+  "deviceNotConnected": "الجهاز غير متصل",
+  "@deviceNotConnected": {
+    "description": "رسالة عند عدم اتصال الجهاز"
+  },
+  "allPatientsStable": "جميع المرضى في حالة مستقرة",
+  "@allPatientsStable": {
+    "description": "رسالة عند استقرار جميع المرضى"
+  },
+  "noCriticalCases": "لا توجد حاليًا حالات حرجة",
+  "@noCriticalCases": {
+    "description": "رسالة عند عدم وجود حالات حرجة"
+  },
+  "addedToCriticalCases": "تمت الإضافة إلى الحالات الحرجة",
+  "@addedToCriticalCases": {
+    "description": "رسالة عند إضافة حالة حرجة"
+  },
+  "added": "تمت الإضافة",
+  "@added": {
+    "description": "رسالة عند إضافة عنصر أو حالة"
+  },
+  "timeMinutesAgo": "منذ {count} دقيقة",
+  "@timeMinutesAgo": {
+    "description": "نص يعبر عن الوقت منذ عدد دقائق",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "timeHoursAgo": "منذ {count} ساعة",
+  "@timeHoursAgo": {
+    "description": "نص يعبر عن الوقت منذ عدد ساعات",
+    "placeholders": {
+      "count": {}
+    }
+  },
+  "buyDeviceTitle": "شراء الجهاز",
+  "buyYourDevice": "إشتري جهازك",
+  "buyDeviceDesc": "يرجى إدخال بياناتك لإتمام طلب الشراء:",
+  "buyDeviceSuccess": "تم إرسال طلب الشراء بنجاح! سيتم التواصل معك قريباً.",
+  "buyDeviceError": "حدث خطأ أثناء إرسال الطلب",
+  "fullNameRequired": "الاسم الكامل مطلوب",
+  "phoneNumber": "رقم الجوال",
+  "phoneNumberRequired": "رقم الجوال مطلوب",
+  "address": "العنوان",
+  "addressRequired": "العنوان مطلوب",
+  "sendOrder": "إرسال الطلب",
+  "qrScannerTooltip": "مسح رمز QR",
+  "scanDeviceIdQR": "مسح معرف الجهاز",
+  "cameraNotAccessible": "لا يمكن الوصول للكاميرا. يرجى الإدخال اليدوي",
+  "deviceIdScannedSuccessfully": "تم مسح معرف الجهاز بنجاح: {deviceId}",
+  "@deviceIdScannedSuccessfully": {
+    "description": "رسالة نجاح مسح معرف الجهاز",
+    "placeholders": {
+      "deviceId": {
+        "type": "String"
+      }
+    }
+  },
+  "deviceIdEnteredManually": "تم إدخال معرف الجهاز: {deviceId}",
+  "@deviceIdEnteredManually": {
+    "description": "رسالة إدخال معرف الجهاز يدوياً",
+    "placeholders": {
+      "deviceId": {
+        "type": "String"
+      }
+    }
+  },
+  "deviceSerialNotFound": "لا يوجد جهاز مسجل برقم التسلسل {deviceId}. يرجى التأكد من الرقم والمحاولة مرة أخرى.",
+  "@deviceSerialNotFound": {
+    "description": "رسالة تظهر عند عدم العثور على رقم تسلسلي للجهاز في قاعدة البيانات",
+    "placeholders": {
+      "deviceId": {
+        "type": "String",
+        "example": "ABC-123"
+      }
+    }
+  },
+  "deviceIdInfo": "معرف الجهاز هو الرقم الموجود على ملصق الجهاز أو يمكنك مسحه باستخدام رمز QR المرفق مع الجهاز",
+  "patientInformation": "بيانات المريض",
+  "patientName": "اسم المريض",
+  "enterPatientName": "أدخل اسم المريض",
+  "patientAge": "عمر المريض",
+  "enterPatientAge": "أدخل عمر المريض",
+  "pleaseEnterPatientAge": "يرجى إدخال عمر المريض",
+  "validAgeRange": "يرجى إدخال عمر صحيح (1-150)",
+  "gender": "الجنس",
+  "male": "ذكر",
+  "female": "أنثى",
+  "bloodType": "فصيلة الدم",
+  "phoneNumberOptional": "رقم الجوال (اختياري)",
+  "enterPhoneNumber": "أدخل رقم الجوال",
+  "validPhoneNumber": "يرجى إدخال رقم جوال صحيح (10 أرقام)",
+  "chronicDiseases": "الأمراض المزمنة",
+  "selectChronicDiseases": "اختر الأمراض المزمنة",
+  "none": "لا يوجد",
+  "diabetes": "السكري",
+  "hypertension": "ضغط الدم المرتفع",
+  "heartDisease": "أمراض القلب",
+  "asthma": "الربو",
+  "arthritis": "التهاب المفاصل",
+  "kidneyDisease": "أمراض الكلى",
+  "liverDisease": "أمراض الكبد",
+  "cancer": "السرطان",
+  "epilepsy": "الصرع",
+  "depression": "الاكتئاب",
+  "anxietyDisorders": "اضطرابات القلق",
+  "osteoporosis": "هشاشة العظام",
+  "thyroidDisease": "الغدة الدرقية",
+  "cholesterol": "الكوليسترول",
+  "digestiveDisorders": "أمراض الجهاز الهضمي",
+  "numberOfSelectedDiseases": "{count} أمراض مختارة",
+  "@numberOfSelectedDiseases": {
+    "description": "عدد الأمراض المختارة",
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "selectChronicDiseasesTitle": "اختر الأمراض المزمنة",
+  "confirmSelection": "تأكيد",
+  "notes": "ملاحظات",
+  "addPatientNotes": "أضف أي ملاحظات إضافية عن المريض...",
+  "patientDataInfo": "سيتم حفظ بيانات المريض محلياً وربطها بالجهاز لتقديم تحليل طبي أكثر دقة",
+  "addDeviceAndPatient": "إضافة الجهاز والمريض",
+  "deviceAddedAndPatientSaved": "تم إضافة الجهاز وبيانات المريض بنجاح",
+  "pointCameraToQR": "وجه الكاميرا نحو رمز QR الخاص بالجهاز",
+  "manualDeviceIdEntry": "إدخال معرف الجهاز يدوياً",
+  "enterDeviceIdManually": "يرجى إدخال معرف الجهاز",
+  "deviceIdMinLengthManual": "معرف الجهاز يجب أن يكون 3 أحرف على الأقل",
+  "add": "إضافة",
+  "editPatientInfo": "تعديل بيانات المريض",
+  "updatePatientInfo": "تحديث بيانات المريض",
+  "patientInfoUpdatedSuccessfully": "تم تحديث بيانات المريض بنجاح",
+  "saveChanges": "حفظ التعديلات",
+  "patientDataCard": "بيانات المريض",
+  "edit": "تعديل",
+  "deviceIdDisplay": "معرف الجهاز:",
+  "patientNameDisplay": "اسم المريض:",
+  "ageDisplay": "العمر:",
+  "yearsOld": "{age} سنة",
+  "@yearsOld": {
+    "description": "عرض العمر بالسنوات",
+    "placeholders": {
+      "age": {
+        "type": "int"
+      }
+    }
+  },
+  "genderDisplay": "الجنس:",
+  "bloodTypeDisplay": "فصيلة الدم",
+  "phoneNumberDisplay": "رقم الجوال",
+  "chronicDiseasesDisplay": "الأمراض المزمنة",
+  "notesDisplay": "ملاحظات",
+  "notSpecified": "غير محدد",
+  "noNotes": "لا توجد ملاحظات",
+  "lastUpdate": "آخر تحديث: {time}",
+  "@lastUpdate": {
+    "description": "آخر تحديث للبيانات",
+    "placeholders": {
+      "time": {
+        "type": "String"
+      }
+    }
+  },
+  "nowTime": "الآن",
+  "minutesAgo": "{minutes} دقيقة",
+  "@minutesAgo": {
+    "description": "الوقت بالدقائق منذ التحديث",
+    "placeholders": {
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+  "hoursAgo": "{hours} ساعة",
+  "@hoursAgo": {
+    "description": "الوقت بالساعات منذ التحديث",
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      }
+    }
+  },
+  "daysAgo": "{days} يوم",
+  "@daysAgo": {
+    "description": "الوقت بالأيام منذ التحديث",
+    "placeholders": {
+      "days": {
+        "type": "int"
+      }
+    }
+  },
+  "scanDeviceQR": "مسح رمز QR للجهاز",
+  "@scanDeviceQR": {
+    "description": "عنوان نافذة مسح رمز QR"
+  },
+  "qrScanInstructions": "وجه الكاميرا نحو رمز QR الخاص بالجهاز الطبي",
+  "@qrScanInstructions": {
+    "description": "تعليمات مسح رمز QR"
+  },
+  "enterManually": "إدخال يدوي",
+  "@enterManually": {
+    "description": "خيار الإدخال اليدوي"
+  },
+  "manualEntryInstructions": "يرجى إدخال معرف الجهاز الطبي يدوياً",
+  "@manualEntryInstructions": {
+    "description": "تعليمات الإدخال اليدوي"
+  },
+  "deviceIdTooShort": "معرف الجهاز قصير جداً (3 أحرف على الأقل)",
+  "@deviceIdTooShort": {
+    "description": "رسالة خطأ عندما يكون معرف الجهاز قصيراً"
+  },
+  "age": "العمر",
+  "@age": {
+    "description": "تسمية العمر"
+  },
+  "years": "سنة",
+  "@years": {
+    "description": "وحدة السنوات"
+  },
+  "phone": "الهاتف",
+  "@phone": {
+    "description": "تسمية الهاتف"
+  },
+  "notUpdated": "لم يتم التحديث",
+  "@notUpdated": {
+    "description": "نص عندما لا يوجد تحديث"
+  },
+  "unspecifiedBloodType": "غير محدد",
+  "@unspecifiedBloodType": {
+    "description": "خيار غير محدد لفصيلة الدم"
+  },
+  "noChronicDiseases": "لا يوجد",
+  "@noChronicDiseases": {
+    "description": "خيار لا يوجد للأمراض المزمنة"
+  },
+  "noChronicDiseasesSelected": "لم يتم اختيار أمراض مزمنة",
+  "@noChronicDiseasesSelected": {
+    "description": "رسالة عندما لا يتم اختيار أي أمراض مزمنة"
+  }
+}
