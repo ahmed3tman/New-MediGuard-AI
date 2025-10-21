@@ -46,7 +46,25 @@ class MedicalAssistantCubit extends Cubit<MedicalAssistantState> {
       _messages = List.from(_savedChats[_currentPatientId]!);
     } else {
       _messages.clear();
-      // لا تضف أي رسالة ترحيب ثابتة
+    }
+
+    // Add a persistent assistant welcome message at the start if missing
+    final welcomeText = isArabic
+        ? 'كيف يمكنني مساعدتك؟'
+        : 'How can I help you?';
+    final hasWelcome =
+        _messages.isNotEmpty && _messages.first.content == welcomeText;
+    if (!hasWelcome) {
+      final welcomeMessage = ChatMessage(
+        id: 'welcome_${_currentPatientId}_${DateTime.now().millisecondsSinceEpoch}',
+        content: welcomeText,
+        isUser: false,
+        timestamp: DateTime.now(),
+        type: MessageType.text,
+      );
+      _messages.insert(0, welcomeMessage);
+      // Persist the chat including the welcome message
+      _savedChats[_currentPatientId] = List.from(_messages);
     }
 
     // تحديث الأسئلة المقترحة
@@ -105,8 +123,6 @@ class MedicalAssistantCubit extends Cubit<MedicalAssistantState> {
           }
         });
       }
-
-      final encodedPatientData = _encodeMap(_currentPatientData);
 
       // إرسال فقط deviceId للـ API (لتخفيف الحمل وتجنب مشاكل التحويل)
       final simplePatientData = {
