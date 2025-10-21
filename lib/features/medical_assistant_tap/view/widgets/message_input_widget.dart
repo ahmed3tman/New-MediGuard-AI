@@ -40,7 +40,7 @@ class _MessageInputWidgetState extends State<MessageInputWidget> {
 
   void _openAudioRecorder() {
     if (widget.onSendAudio == null) return;
-
+    // لا تفتح أي قائمة وسيطة، فقط BottomSheet التسجيل المباشر
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
@@ -50,6 +50,7 @@ class _MessageInputWidgetState extends State<MessageInputWidget> {
           widget.onSendAudio!(audioPath);
         },
         isArabic: widget.isArabic,
+        autoStart: true,
       ),
     );
   }
@@ -154,6 +155,9 @@ class _MessageInputWidgetState extends State<MessageInputWidget> {
                   ),
                 ),
               ),
+
+            // مسافة بسيطة بين زر المايك وزر الإرسال
+            const SizedBox(width: 8),
 
             // زر الإرسال
             Container(

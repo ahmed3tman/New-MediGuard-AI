@@ -77,17 +77,20 @@ class PatientApiService {
     final diastolic = vitalSigns.bloodPressure['diastolic'] ?? 0;
 
     final vitals = <String, dynamic>{};
+    // Keep keys the same as backend expects, but send values as objects
+    // so backend code that calls `.get(...)` on each field works.
     if (vitalSigns.heartRate > 0) {
-      vitals["heart_rate"] = {"value": vitalSigns.heartRate.toInt()};
+      vitals["hr"] = {"value": vitalSigns.heartRate.toInt()};
     }
     if (vitalSigns.spo2 > 0) {
-      vitals["oxygen_saturation"] = {"value": vitalSigns.spo2.toInt()};
+      vitals["spo2"] = {"value": vitalSigns.spo2.toInt()};
     }
     if (vitalSigns.temperature > 0) {
-      vitals["temperature"] = {"value": vitalSigns.temperature};
+      vitals["temp"] = {"value": vitalSigns.temperature};
     }
     if (systolic > 0 && diastolic > 0) {
-      vitals["blood_pressure"] = {"systolic": systolic, "diastolic": diastolic};
+      final bpValue = {"systolic": systolic, "diastolic": diastolic};
+      vitals["bp"] = bpValue;
     }
     if (vitalSigns.respiratoryRate > 0) {
       vitals["respiratory_rate"] = {
@@ -132,6 +135,25 @@ class PatientApiService {
       patientInfo: patientInfo,
       vitalSigns: vitalSigns,
     );
+
+    // Safety: some backends expect vitals values to be objects (e.g. {"value": 74})
+    // If any numeric fields slipped through as plain ints, wrap them here.
+    try {
+      final vitals = payload['vitals'];
+      if (vitals is Map<String, dynamic>) {
+        final keys = List<String>.from(vitals.keys);
+        for (final k in keys) {
+          final v = vitals[k];
+          if (v is int || v is double) {
+            vitals[k] = {"value": v};
+          }
+        }
+      }
+    } catch (e) {
+      debugPrint('Error normalizing vitals: $e');
+    }
+
+    debugPrint("\uD83D\uDCCB Payload to API: ${jsonEncode(payload)}");
 
     final payloadHash = payload.toString().hashCode.toString();
     if (!forceUpdate && payloadHash == _lastSentHash) {

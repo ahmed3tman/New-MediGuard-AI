@@ -8,11 +8,13 @@ import 'package:path_provider/path_provider.dart';
 class AudioRecorderWidget extends StatefulWidget {
   final Function(String audioPath) onAudioRecorded;
   final bool isArabic;
+  final bool autoStart;
 
   const AudioRecorderWidget({
     Key? key,
     required this.onAudioRecorded,
     required this.isArabic,
+    this.autoStart = false,
   }) : super(key: key);
 
   @override
@@ -20,6 +22,7 @@ class AudioRecorderWidget extends StatefulWidget {
 }
 
 class _AudioRecorderWidgetState extends State<AudioRecorderWidget> {
+  bool _permissionChecked = false;
   final AudioRecorder _audioRecorder = AudioRecorder();
   bool _isRecording = false;
   int _recordDuration = 0;
@@ -33,22 +36,115 @@ class _AudioRecorderWidgetState extends State<AudioRecorderWidget> {
     super.dispose();
   }
 
+  @override
+  void initState() {
+    super.initState();
+    // Try to request permission once when opening the recorder to trigger
+    // the system permission dialog on first use.
+    _requestMicPermissionOnOpen();
+    // If autoStart is requested, try to start recording after a short delay
+    if (widget.autoStart) {
+      WidgetsBinding.instance.addPostFrameCallback((_) async {
+        final ok = await _ensureMicPermission();
+        if (ok && mounted) {
+          await _startRecording();
+        }
+      });
+    }
+  }
+
+  Future<void> _requestMicPermissionOnOpen() async {
+    if (_permissionChecked) return;
+    _permissionChecked = true;
+    // Request permission silently on open; if denied we don't show dialog
+    // here because the user may just be opening the sheet. We'll handle
+    // denied/permanentlyDenied when starting recording.
+    try {
+      await Permission.microphone.request();
+    } catch (e) {
+      debugPrint('Permission request error: $e');
+    }
+  }
+
+  Future<bool> _ensureMicPermission({bool showDialogOnDenied = true}) async {
+    final status = await Permission.microphone.status;
+    if (status.isGranted) return true;
+
+    // Try requesting permission
+    final newStatus = await Permission.microphone.request();
+    if (newStatus.isGranted) return true;
+
+    if (!showDialogOnDenied || !mounted) return false;
+
+    // Show a dialog offering Retry (re-request), Open Settings, or Cancel.
+    final result = await showDialog<bool>(
+      context: context,
+      barrierDismissible: false,
+      builder: (ctx) {
+        return AlertDialog(
+          title: Text(
+            widget.isArabic ? 'إذن الميكروفون' : 'Microphone Permission',
+          ),
+          content: Text(
+            widget.isArabic
+                ? 'يجب تفعيل إذن الميكروفون لتمكين التسجيل. يمكنك إعادة المحاولة أو فتح إعدادات التطبيق.'
+                : 'Microphone permission is required to record. You can retry or open app settings.',
+          ),
+          actions: [
+            TextButton(
+              onPressed: () async {
+                // Retry: request permission again
+                final retryStatus = await Permission.microphone.request();
+                if (retryStatus.isGranted) {
+                  Navigator.of(ctx).pop(true);
+                } else {
+                  // If still denied, return false and let caller handle further UX
+                  Navigator.of(ctx).pop(false);
+                }
+              },
+              child: Text(widget.isArabic ? 'إعادة المحاولة' : 'Retry'),
+            ),
+            TextButton(
+              onPressed: () {
+                openAppSettings();
+                Navigator.of(ctx).pop(false);
+              },
+              child: Text(
+                widget.isArabic ? 'الذهاب للإعدادات' : 'Open Settings',
+              ),
+            ),
+            TextButton(
+              onPressed: () => Navigator.of(ctx).pop(false),
+              child: Text(widget.isArabic ? 'إلغاء' : 'Cancel'),
+            ),
+          ],
+        );
+      },
+    );
+
+    if (result == true) return true;
+
+    // After dialog closed (either user chose Cancel/Open Settings or Retry failed), show a snackbar suggestion
+    if (mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            widget.isArabic
+                ? 'يجب السماح بالوصول للميكروفون للبدء بالتسجيل.'
+                : 'Microphone permission is required to start recording.',
+          ),
+        ),
+      );
+    }
+
+    return false;
+  }
+
   Future<void> _startRecording() async {
     try {
-      // Request microphone permission
-      final status = await Permission.microphone.request();
-      if (!status.isGranted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text(
-              widget.isArabic
-                  ? 'يجب السماح بالوصول للميكروفون'
-                  : 'Microphone permission required',
-            ),
-          ),
-        );
-        return;
-      }
+      // Ensure microphone permission is granted, otherwise guide user
+      final ok = await _ensureMicPermission();
+      if (!ok) return;
 
       // Get temporary directory
       final directory = await getTemporaryDirectory();
@@ -149,23 +245,8 @@ class _AudioRecorderWidgetState extends State<AudioRecorderWidget> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          // Drag handle
-          Container(
-            width: 40,
-            height: 4,
-            decoration: BoxDecoration(
-              color: Colors.grey[300],
-              borderRadius: BorderRadius.circular(2),
-            ),
-          ),
-          const SizedBox(height: 24),
-
-          // Title
-          Text(
-            widget.isArabic ? 'تسجيل رسالة صوتية' : 'Record Voice Message',
-            style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-          ),
-          const SizedBox(height: 32),
+          // ===== Compact recording card (no top handle/title) =====
+          const SizedBox(height: 8),
 
           // Recording indicator
           if (_isRecording) ...[
@@ -227,7 +308,7 @@ class _AudioRecorderWidgetState extends State<AudioRecorderWidget> {
             ),
           ],
 
-          const SizedBox(height: 32),
+          const SizedBox(height: 16),
 
           // Control buttons
           if (_isRecording)

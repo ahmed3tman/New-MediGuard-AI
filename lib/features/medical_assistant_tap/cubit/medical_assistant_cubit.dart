@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import '../model/medical_assistant_models.dart';
 import 'medical_assistant_state.dart';
 import '../data/medical_assistant_service.dart';
-import '../../patient_records_tap/services/patient_api_service.dart';
 
 class MedicalAssistantCubit extends Cubit<MedicalAssistantState> {
   MedicalAssistantCubit() : super(MedicalAssistantInitial());
